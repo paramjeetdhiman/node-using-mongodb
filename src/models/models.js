@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
 
-const ProductSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+export const ProductSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: "Enter a product name",
   },
   description: {
     type: String,
-    required: true,
+    required: "Enter a description",
   },
   category: {
     type: String,
@@ -16,8 +18,7 @@ const ProductSchema = new mongoose.Schema({
     type: Number,
   },
   created_date: {
-    type: Date.now,
+    type: Date,
+    default: Date.now,
   },
 });
-
-export const Product = mongoose.model("Product", ProductSchema);

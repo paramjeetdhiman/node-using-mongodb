@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 // mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/productsdb", {
+mongoose.connect("mongodb://localhost/productsdb", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
